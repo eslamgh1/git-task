@@ -1,0 +1,789 @@
+    /* ! Global classes */
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    * ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    body {
+        margin: 0;
+        font-family: Open Sans;
+        /* overflow: hidden; */
+        /* background-color: black; */
+    }
+    
+    h2 {
+        font-family: "Amatic SC";
+    }
+    
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+    /* ! End Global classes */
+    
+    @media screen and (max-width: 993px) {
+        .nav:hover .nav__links {
+            background-color: gray;
+            left: 450px;
+            top: 10px;
+            transition: all 1s;
+        }
+    }
+    
+    .nav {
+        background-color: white;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    .nav__logo a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .red-dot {
+        color: red;
+    }
+    
+    .nav__links {
+        position: absolute;
+        left: 750px;
+        /* background-color: green; */
+        /* * remove below display:  */
+        /* display: none; */
+        transition: all 3s;
+    }
+    
+    .nav__links a {
+        text-decoration: none;
+        color: black;
+        padding: 20px;
+        display: inline-block;
+        position: relative;
+    }
+    /* Nav Idea of hover lines by after  */
+    
+    .nav__links a::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        /* width: 70%; */
+        height: 1px;
+        background-color: #E68888;
+        bottom: 2px;
+        left: 20px;
+        transition: 1s all;
+    }
+    
+    .nav__links a:hover::after {
+        width: 70%;
+    }
+    
+    .home {
+        background-color: #EEEEEE;
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        /* This value should be slightly more than the height of your navbar */
+    }
+    
+    .home .container {
+        margin-top: 100px;
+    }
+    
+    .home__caption {
+        /* background-color: blueviolet; */
+        padding: 0;
+    }
+    
+    .home__caption p {
+        text-align: left;
+        max-width: 600px;
+    }
+    
+    .home__caption h2 {
+        font-size: 65px;
+        font-weight: 700px;
+    }
+    
+    .home__img {
+        /* background-color: brown; */
+        width: 100%;
+        overflow-clip-margin: content-box;
+        /* box-sizing: inherit; */
+    }
+    
+    .home__img img {
+        width: 100%;
+    }
+    
+    .home__img:hover img {
+        animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+        transform: translate3d(0, 0, 0);
+        perspective: 1000px;
+    }
+    
+    @keyframes shake {
+        10%,
+        90% {
+            transform: translate3d(-1px, 1px, 0);
+        }
+        20%,
+        80% {
+            transform: translate3d(2px, 0, 2px);
+        }
+        30%,
+        50%,
+        70% {
+            transform: translate3d(-2px, 0, 5px);
+        }
+        40%,
+        60% {
+            transform: translate3d(2px, 0, 0);
+        }
+    }
+    
+    .home__buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        flex-grow: 1;
+    }
+    
+    .home-btn {
+        background-color: RGB(230, 20, 20);
+        border: 1px solid;
+        border-radius: 0px 30px 30px 30px;
+        width: 130px;
+        height: 50px;
+        font-size: 15px;
+        font-weight: 400;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .home__buttons a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    a#colorbt {
+        color: white;
+    }
+    
+    .fa-play {
+        border: 8px solid;
+        border-image: linear-gradient(to right, red 50%, white 50%) 1;
+        /* ^ It is not working border-radius: 50%;*/
+        border-radius: 100%;
+        color: black;
+        background-color: white;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        padding: 13px;
+        margin-right: 20px;
+    }
+    
+    .home-btn-play {
+        font-weight: 600;
+    }
+    
+    a#colorbt:hover {
+        background-color: red;
+        transition: .5s all;
+    }
+    
+    a.home-btn-play {
+        transition: .5s all;
+    }
+    
+    a.home-btn-play:hover {
+        color: rgb(228, 56, 85);
+    }
+    
+    #f {
+        transition: all 1s;
+    }
+    
+    a.home-btn-play:hover .fa-play {
+        color: rgb(228, 56, 85);
+        transition: all 1s;
+    }
+    
+    .container .title-chefs {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .chefs {
+        margin-bottom: 0;
+    }
+    
+    .container .items-chef {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .title-chefs h2 {
+        font-size: 28px;
+        font-weight: 0.875rem;
+        text-transform: uppercase;
+        font-family: Amatic SC;
+        color: gray;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .red-word {
+        color: red;
+    }
+    
+    .title-chefs p {
+        font-size: 30px;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .title-chefs {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    
+    .card-chef img {
+        width: 100%;
+        margin: auto;
+    }
+    
+    .card-chef {
+        margin-bottom: 50px;
+        background-color: #FFFFFF;
+        position: relative;
+        width: 90%;
+        transition: 1s all;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* Adds a shadow */
+        border-radius: 15px;
+        /* Adds rounded corners */
+        overflow: hidden;
+        /* Ensures the images inside respect the container's radius */
+    }
+    
+    .card-chef:hover {
+        /* background-color: rgb(5, 108, 122); */
+        transform: scale(1.1);
+    }
+    
+    .img-container {
+        width: 100%;
+        /* background-color: #E68888; */
+        position: relative;
+    }
+    
+    .img-container img.wave-pic {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+    
+    .caption-chef {
+        /* background-color: black; */
+    }
+    
+    .caption-chef p,
+    .card-chef .caption-chef .master {
+        color: #7F7F90;
+    }
+    
+    .gallery {
+        background-color: #EEEEEE;
+        /* margin-top: 20px; */
+        padding-bottom: 80px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    
+    .gallery-title {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    
+    .gallery-card img {
+        width: 100%;
+        display: block;
+    }
+    
+    .layer {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        transition: 1s all;
+        color: white;
+    }
+    
+    .gallery-card {
+        /* background-color: aquamarine; */
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .gallery-card:hover .layer {
+        top: 0;
+    }
+    
+    .gallery h2 {
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+        font-family: "Amatic SC";
+    }
+    
+    .gallery p {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .gallery-contents {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .gallery .gallery-title .gallery-contents {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    @media (min-width:768px) {
+        .home .container {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        .home__img {
+            width: 40%;
+        }
+        .home__caption {
+            text-align: left;
+        }
+        .nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav__links ul {
+            display: flex;
+        }
+        .home__buttons {
+            display: flex;
+            justify-content: flex-start;
+        }
+        /* .card-chef {
+            width: 47%;
+            margin-bottom: 20px;
+        }
+        .card-chef img {
+            width: 100%;
+        }
+        .items-chef {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5%;
+            justify-content: flex-start;
+        } */
+    }
+    
+    @media (min-width:768px) and (max-width:992px) {
+        .card-chef {
+            width: 47%;
+            margin-bottom: 20px;
+        }
+        .card-chef img {
+            width: 100%;
+        }
+        .items-chef {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5%;
+            justify-content: flex-start;
+        }
+    }
+    
+    @media screen and (min-width:768px) and (max-width:992px) {
+        .gallery-contents {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .gallery-card {
+            width: calc(calc(100% - 20px)/2);
+        }
+        .pizza {
+            order: 1;
+            height: 100%;
+            /* ^ I added height to hide  the hover out side the dive */
+        }
+        .burger {
+            order: 3;
+            height: 100%;
+            transform: translateY(-120%)
+        }
+        .xpizza {
+            order: 6;
+            height: 100%;
+            transform: translateY(-40%)
+        }
+        .yellow {
+            order: 7;
+            height: 100%;
+            transform: translateY(-40%)
+        }
+        .meat {
+            order: 2;
+            height: 100%;
+        }
+        .chicken {
+            order: 4;
+            height: 100%;
+        }
+        .ballmeat {
+            order: 6;
+            height: 100%;
+        }
+    }
+    
+    @media screen and (min-width:993px) {
+        .card-chef {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+        .card-chef img {
+            width: 100%;
+        }
+        .items-chef {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5%;
+            justify-content: flex-start;
+        }
+        .gallery-contents {
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        .gallery-card {
+            width: calc(calc(100% - 40px)/3);
+        }
+        .pizza {
+            order: 1;
+            height: 100%;
+            /* ^ I added height to hide  the hover out side the dive */
+        }
+        .burger {
+            order: 3;
+            height: 100%;
+            transform: translate();
+        }
+        .xpizza {
+            order: 4;
+            height: 100%;
+            transform: translateY(-60%)
+        }
+        .yellow {
+            order: 7;
+            height: 100%;
+            transform: translate(110%, -150%)
+        }
+        .meat {
+            order: 2;
+            height: 100%;
+        }
+        .chicken {
+            order: 6;
+            height: 100%;
+            transform: translateY(-120%);
+        }
+        .ballmeat {
+            order: 5;
+            height: 100%;
+            transform: translateX(110%);
+        }
+    }
+    /** Contact section */
+    
+    .google-map iframe {
+        width: 100%;
+    }
+    
+    .contact-title {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .contact-title p {
+        margin-top: 5px;
+        text-align: center;
+        font-family: "Amatic SC";
+        font-size: 50px;
+    }
+    
+    .contact-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .main-info .info-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #E61414;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    
+    .main-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .userName,
+    .userEmail,
+    .subject,
+    .userMessage {
+        width: 100%;
+        padding: 10px 20px 10px 5px;
+        font-family: inherit;
+        border: 1px solid rgb(0, 0, 0, .4);
+    }
+    
+    input:focus,
+    textarea:focus {
+        outline: 0;
+        border-color: #e22d2d;
+    }
+    
+    input::placeholder,
+    textarea::placeholder {
+        color: rgb(0, 0, 0, .4);
+    }
+    
+    form .main-input {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .subject {
+        margin: 20px 0;
+    }
+    
+    #userName {
+        margin-bottom: 5px;
+    }
+    
+    #userEmail {
+        margin-bottom: 5px;
+    }
+    
+    .userEmail {}
+    
+    .main-input {}
+    
+    .main-info {
+        background-color: #F5F5F5;
+        width: 100%;
+    }
+    
+    .lastbtn {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        ;
+    }
+    
+    .btn-message {
+        background-color: RGB(230, 20, 20);
+        border: 1px solid;
+        border: none;
+        border-radius: 20px;
+        width: 30%;
+        font-size: 15px;
+        font-weight: 400;
+        padding: 10px;
+        text-align: center;
+        color: azure;
+        text-align: center;
+        transition: 1s all;
+    }
+    
+    .lastbtn:hover .btn-message {
+        background-color: #e22d2d;
+    }
+    
+    @media screen and (min-width:768px) {
+        .inner-info {
+            display: flex;
+            gap: 30px;
+            /* text-align: center; */
+        }
+        .btn-message {
+            width: 20%;
+        }
+    }
+    
+    @media screen and (min-width:993px) {
+        .main-inputs {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-message {
+            width: 20%;
+        }
+    }
+    
+    .footer-logo {
+        position: relative;
+    }
+    
+    .footer-logo img {
+        width: 10%;
+        height: 10%;
+        position: relative;
+        top: 20px;
+    }
+    
+    .footer-logo h2 {
+        font-size: 30px;
+    }
+    
+    .footer {
+        margin-top: 100px;
+        background-image: url(/images/blackpic.jpg);
+        color: white;
+        margin-bottom: 50px;
+        overflow: hidden;
+    }
+    
+    .footer-logo {
+        display: flex;
+        /* flex-wrap: wrap; */
+        gap: 20px;
+    }
+    
+    .list-icons li {
+        list-style-type: none;
+        display: inline-block;
+        margin-right: 5%;
+    }
+    
+    .list-icons a {
+        color: white;
+    }
+    
+    .footer-part1 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer-logo hr {
+        width: 100%;
+    }
+    
+    button {
+        background-color: #E61414;
+        color: white;
+        padding: 8px;
+        border-style: none;
+    }
+    
+    button i {
+        color: #F5F5F5;
+        text-align: center;
+    }
+    
+    button {
+        transition: 1s all;
+    }
+    
+    .tabs:hover button {
+        background-color: #e22d2d;
+    }
+    
+    #eadress {
+        width: 70%;
+        height: 35px;
+    }
+    
+    .quick-link {
+        position: relative;
+        display: flex;
+    }
+    
+    .quick-link ul li {
+        margin-right: 120px;
+        padding-right: 100px;
+    }
+    
+    .quick-link li::before {
+        content: ">";
+        position: relative;
+    }
+    
+    .fa-envelope {
+        margin-right: 10px;
+    }
+    
+    .foot-part3 ul li i {
+        color: red;
+        margin-right: 30px;
+    }
+    
+    .foot-part3 ul li {
+        margin-bottom: 20px;
+    }
+    
+    @media screen and (min-width:775px) {
+        .footer .container {
+            display: flex;
+            gap: 30px;
+        }
+    }
+    
+    @media screen and (min-width:1240px) {
+        .left-box {
+            display: flex;
+            gap: 30px;
+        }
+    }
+    
+    #grad {
+        background-image: linear-gradient(to left, red, yellow);
+    }
